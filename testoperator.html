@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Practice Project</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+padding:40px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:10px;
+}
+
+section{
+margin-top:30px;
+padding:20px;
+background:#fafafa;
+border-radius:8px;
+}
+
+input{
+padding:8px;
+margin:5px;
+}
+
+button{
+padding:8px 12px;
+background:#4CAF50;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+.result{
+margin-top:10px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>JavaScript Operators Practice</h1>
+
+<!-- 1 Cart Total -->
+<section>
+<h2>1. E-commerce Cart Total</h2>
+<input type="number" id="item1" placeholder="Item 1 price">
+<input type="number" id="item2" placeholder="Item 2 price">
+<input type="number" id="item3" placeholder="Item 3 price">
+<button onclick="cartTotal()">Calculate Total</button>
+<div class="result" id="cartResult"></div>
+</section>
+
+<!-- 2 Discount -->
+<section>
+<h2>2. 10% Coupon Discount</h2>
+<input type="number" id="price" placeholder="Original Price">
+<button onclick="discount()">Apply Coupon</button>
+<div class="result" id="discountResult"></div>
+</section>
+
+<!-- 3 Tax -->
+<section>
+<h2>3. Bill With 18% Tax</h2>
+<input type="number" id="bill" placeholder="Enter Bill">
+<button onclick="taxBill()">Calculate</button>
+<div class="result" id="taxResult"></div>
+</section>
+
+<!-- 4 BMI -->
+<section>
+<h2>4. BMI Calculator</h2>
+<input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="height" placeholder="Height (m)">
+<button onclick="bmi()">Calculate BMI</button>
+<div class="result" id="bmiResult"></div>
+</section>
+
+<!-- 5 Salary -->
+<section>
+<h2>5. Salary After Tax</h2>
+<input type="number" id="salary" placeholder="Monthly Salary">
+<button onclick="salaryCalc()">Calculate</button>
+<div class="result" id="salaryResult"></div>
+</section>
+
+<!-- 6 Average Rating -->
+<section>
+<h2>6. Product Average Rating</h2>
+<input type="number" id="r1" placeholder="Rating 1">
+<input type="number" id="r2" placeholder="Rating 2">
+<input type="number" id="r3" placeholder="Rating 3">
+<input type="number" id="r4" placeholder="Rating 4">
+<input type="number" id="r5" placeholder="Rating 5">
+<button onclick="rating()">Average</button>
+<div class="result" id="ratingResult"></div>
+</section>
+
+<!-- 7 Delivery Charge -->
+<section>
+<h2>7. Delivery Charge</h2>
+<input type="number" id="orderAmount" placeholder="Order Amount">
+<button onclick="delivery()">Check Delivery</button>
+<div class="result" id="deliveryResult"></div>
+</section>
+
+<!-- 8 Interest -->
+<section>
+<h2>8. Simple Interest</h2>
+<input type="number" id="principal" placeholder="Principal">
+<input type="number" id="rate" placeholder="Rate">
+<input type="number" id="time" placeholder="Time (years)">
+<button onclick="interest()">Calculate</button>
+<div class="result" id="interestResult"></div>
+</section>
+
+<!-- 9 Withdraw -->
+<section>
+<h2>9. Bank Withdrawal</h2>
+<input type="number" id="balance" placeholder="Account Balance">
+<input type="number" id="withdraw" placeholder="Withdraw Amount">
+<button onclick="withdrawMoney()">Withdraw</button>
+<div class="result" id="withdrawResult"></div>
+</section>
+
+<!-- 10 Time Converter -->
+<section>
+<h2>10. Minutes to Hours Converter</h2>
+<input type="number" id="minutes" placeholder="Enter Minutes">
+<button onclick="convertTime()">Convert</button>
+<div class="result" id="timeResult"></div>
+</section>
+
+<!-- LOGIN -->
+<section>
+<h2>Login System</h2>
+<input type="text" id="user" placeholder="Username">
+<input type="password" id="pass" placeholder="Password">
+<button onclick="login()">Login</button>
+<div class="result" id="loginResult"></div>
+</section>
+
+<!-- AGE CHECK -->
+<section>
+<h2>Age Restriction</h2>
+<input type="number" id="age" placeholder="Enter Age">
+<button onclick="ageCheck()">Check</button>
+<div class="result" id="ageResult"></div>
+</section>
+
+<!-- DISCOUNT SYSTEM -->
+<section>
+<h2>Store Discount System</h2>
+<input type="number" id="order" placeholder="Order Amount">
+<button onclick="storeDiscount()">Check Discount</button>
+<div class="result" id="storeResult"></div>
+</section>
+
+<!-- GRADES -->
+<section>
+<h2>Student Grade</h2>
+<input type="number" id="marks" placeholder="Enter Marks">
+<button onclick="grade()">Check Grade</button>
+<div class="result" id="gradeResult"></div>
+</section>
+
+<!-- WEATHER -->
+<section>
+<h2>Weather Advisory</h2>
+<input type="text" id="weather" placeholder="hot / cold / rainy">
+<button onclick="weatherCheck()">Check</button>
+<div class="result" id="weatherResult"></div>
+</section>
+
+</div>
+
+<script>
+function cartTotal(){
+let a = Number(document.getElementById("item1").value);
+let b = Number(document.getElementById("item2").value);
+let c = Number(document.getElementById("item3").value);
+let total = a + b + c;
+document.getElementById("cartResult").innerText = "Total = $" + total;
+}
+
+function discount(){
+let price = Number(document.getElementById("price").value);
+let final = price - (price * 0.10);
+document.getElementById("discountResult").innerText = "Price after discount = $" + final;
+}
+
+function taxBill(){
+let bill = Number(document.getElementById("bill").value);
+let total = bill + (bill * 0.18);
+document.getElementById("taxResult").innerText = "Total Bill = $" + total;
+}
+
+function bmi(){
+let w = Number(document.getElementById("weight").value);
+let h = Number(document.getElementById("height").value);
+let bmi = w / (h*h);
+document.getElementById("bmiResult").innerText = "BMI = " + bmi.toFixed(2);
+}
+
+function salaryCalc(){
+let salary = Number(document.getElementById("salary").value);
+let tax = salary * 0.10;
+let final = salary - tax;
+document.getElementById("salaryResult").innerText = "Salary after tax = $" + final;
+}
+
+function rating(){
+let r1 = Number(document.getElementById("r1").value);
+let r2 = Number(document.getElementById("r2").value);
+let r3 = Number(document.getElementById("r3").value);
+let r4 = Number(document.getElementById("r4").value);
+let r5 = Number(document.getElementById("r5").value);
+let avg = (r1+r2+r3+r4+r5)/5;
+document.getElementById("ratingResult").innerText = "Average rating = " + avg.toFixed(2);
+}
+
+function delivery(){
+let amount = Number(document.getElementById("orderAmount").value);
+let text = amount>100?"Free delivery":"Delivery charge $5";
+document.getElementById("deliveryResult").innerText = text;
+}
+
+function interest(){
+let p = Number(document.getElementById("principal").value);
+let r = Number(document.getElementById("rate").value);
+let t = Number(document.getElementById("time").value);
+let si = (p*r*t)/100;
+document.getElementById("interestResult").innerText = "Simple Interest = $" + si.toFixed(2);
+}
+
+function withdrawMoney(){
+let balance = Number(document.getElementById("balance").value);
+let withdraw = Number(document.getElementById("withdraw").value);
+let remaining = balance - withdraw;
+document.getElementById("withdrawResult").innerText = "Remaining balance = $" + remaining;
+}
+
+function convertTime(){
+let minutes = Number(document.getElementById("minutes").value);
+let hours = Math.floor(minutes/60);
+let rem = minutes % 60;
+document.getElementById("timeResult").innerText = hours + " hours " + rem + " minutes";
+}
+
+function login(){
+let u="admin", p="1234";
+let user=document.getElementById("user").value;
+let pass=document.getElementById("pass").value;
+let text = (user===u && pass===p)?"Login successful":"Invalid login";
+document.getElementById("loginResult").innerText=text;
+}
+
+function ageCheck(){
+let age=Number(document.getElementById("age").value);
+let text = age>=18?"Access allowed":"Access denied";
+document.getElementById("ageResult").innerText=text;
+}
+
+function storeDiscount(){
+let order=Number(document.getElementById("order").value);
+let text = order>200?"20% discount":(order>100?"10% discount":"No discount");
+document.getElementById("storeResult").innerText=text;
+}
+
+function grade(){
+let m=Number(document.getElementById("marks").value);
+let g;
+if(m>=90) g="A";
+else if(m>=70) g="B";
+else if(m>=50) g="C";
+else g="Fail";
+document.getElementById("gradeResult").innerText="Grade: "+g;
+}
+
+function weatherCheck(){
+let w=document.getElementById("weather").value.toLowerCase();
+let text;
+if(w=="hot") text="Drink water";
+else if(w=="cold") text="Wear jacket";
+else if(w=="rainy") text="Take umbrella";
+else text="Normal weather";
+document.getElementById("weatherResult").innerText=text;
+}
+
+</script>
+
+</body>
+</html>
