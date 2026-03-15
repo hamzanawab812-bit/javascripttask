@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Basics</title>
+</head>
+
+<body>
+
+<h1>JavaScript Basic Topics</h1> 
+
+
+<script>
+
+/* 1. var, let, const */
+
+var name = "Ali";
+let age = 20;
+const country = "Pakistan";
+
+document.write("<h3>Variables</h3>");
+document.write("Name (var): " + name + "<br>");
+document.write("Age (let): " + age + "<br>");
+document.write("Country (const): " + country + "<br><br>");
+
+
+
+/* 2. Data Types */
+
+let text = "Hello";   // String
+let number = 25;      // Number
+let isStudent = true; // Boolean
+let x;                // undefined
+let y = null;         // null
+
+document.write("<h3>Data Types</h3>");
+document.write("Type of text: " + typeof text + "<br>");
+document.write("Type of number: " + typeof number + "<br>");
+document.write("Type of isStudent: " + typeof isStudent + "<br>");
+document.write("Type of x: " + typeof x + "<br>");
+document.write("Type of y: " + typeof y + "<br><br>");
+
+
+
+/* 3. User Input */
+
+let userInput = prompt("Enter a number");
+
+let numberInput = Number(userInput);
+
+document.write("<h3>User Input</h3>");
+document.write("You entered: " + userInput + "<br>");
+document.write("Converted to number: " + numberInput + "<br>");
+document.write("Type: " + typeof numberInput + "<br>");
+
+</script>
+
+</body>
+</html>
