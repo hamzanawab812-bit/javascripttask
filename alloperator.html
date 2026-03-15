@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learn JavaScript Operators and Conditionals</title>
+<style>
+body{
+font-family: Arial, sans-serif;
+line-height:1.6;
+margin:40px;
+background:#f4f6f8;
+}
+
+h1,h2{
+color:#222;
+}
+
+section{
+background:white;
+padding:20px;
+margin-bottom:25px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+code{
+background:#eee;
+padding:3px 6px;
+border-radius:4px;
+}
+
+.practice{
+background:#fff8dc;
+padding:10px;
+margin-top:10px;
+border-left:5px solid orange;
+}
+</style>
+</head>
+
+<body>
+
+<h1>JavaScript Operators and Conditional Statements</h1>
+<p>Beginner guide. Simple language. Real examples.</p>
+
+<section>
+<h2>1. Arithmetic Operators</h2>
+
+<p>Arithmetic operators work with numbers.</p>
+<p>Just like math.</p>
+
+<p>Common ones:</p>
+
+<ul>
+<li><code>+</code> Add numbers</li>
+<li><code>-</code> Subtract</li>
+<li><code>*</code> Multiply</li>
+<li><code>/</code> Divide</li>
+<li><code>%</code> Remainder</li>
+</ul>
+
+<p>Example. Shopping bill.</p>
+
+<pre>
+let price = 1000;
+let tax = 200;
+
+let total = price + tax;
+
+console.log(total); 
+</pre>
+
+<p>Output: 1200</p>
+
+<p>Example with strings.</p>
+
+<pre>
+let firstName = "Ali";
+let lastName = "Khan";
+
+console.log(firstName + " " + lastName);
+</pre>
+
+<p>Output: Ali Khan</p>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create two variables.<br>
+price = 500<br>
+discount = 100<br>
+Find the final price after discount.
+</div>
+</section>
+
+
+<section>
+<h2>2. Assignment Operators</h2>
+
+<p>Assignment operators store values in variables.</p>
+
+<p>Example.</p>
+
+<pre>
+let price = 1000;
+</pre>
+
+<p>Now price contains 1000.</p>
+
+<p>Shorter ways also exist.</p>
+
+<ul>
+<li><code>+=</code> add and store</li>
+<li><code>-=</code> subtract and store</li>
+</ul>
+
+<p>Example.</p>
+
+<pre>
+let wallet = 1000;
+
+wallet += 500;
+
+console.log(wallet);
+</pre>
+
+<p>Output: 1500</p>
+
+<p>Real life example.</p>
+
+<p>Your salary increases.</p>
+
+<pre>
+let salary = 30000;
+
+salary += 5000;
+
+console.log(salary);
+</pre>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create a variable score = 50<br>
+Add 10 using +=<br>
+Print the result.
+</div>
+</section>
+
+
+<section>
+<h2>3. Comparison Operators</h2>
+
+<p>These operators compare values.</p>
+
+<p>They return true or false.</p>
+
+<ul>
+<li><code>==</code> equal</li>
+<li><code>===</code> equal value and type</li>
+<li><code>!=</code> not equal</li>
+<li><code>&lt;</code> less than</li>
+<li><code>&gt;</code> greater than</li>
+<li><code>&lt;=</code> less or equal</li>
+<li><code>&gt;=</code> greater or equal</li>
+</ul>
+
+<p>Example. Exam result.</p>
+
+<pre>
+let marks = 80;
+
+console.log(marks > 50);
+</pre>
+
+<p>Output: true</p>
+
+<h3>Difference between == and ===</h3>
+
+<p>This is important.</p>
+
+<p><strong>==</strong> compares values only.</p>
+
+<p><strong>===</strong> compares value and data type.</p>
+
+<p>Example.</p>
+
+<pre>
+console.log(5 == "5");
+</pre>
+
+<p>Output: true</p>
+
+<p>Because JavaScript converts the string.</p>
+
+<p>Now strict comparison.</p>
+
+<pre>
+console.log(5 === "5");
+</pre>
+
+<p>Output: false</p>
+
+<p>Number is not the same type as string.</p>
+
+<p>Developers usually prefer <code>===</code>.</p>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create a variable age = 18<br>
+Check if age is greater than or equal to 18.
+</div>
+</section>
+
+
+<section>
+<h2>4. Logical Operators</h2>
+
+<p>Logical operators combine conditions.</p>
+
+<ul>
+<li><code>&&</code> AND</li>
+<li><code>||</code> OR</li>
+<li><code>!</code> NOT</li>
+</ul>
+
+<p>Example. Login check.</p>
+
+<pre>
+let username = "admin";
+let password = "1234";
+
+console.log(username === "admin" && password === "1234");
+</pre>
+
+<p>Both conditions must be true.</p>
+
+<p>Example using OR.</p>
+
+<pre>
+let day = "Sunday";
+
+console.log(day === "Saturday" || day === "Sunday");
+</pre>
+
+<p>This checks weekend.</p>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create two variables.<br>
+isStudent = true<br>
+hasID = true<br>
+Check if both are true using &&.
+</div>
+</section>
+
+
+<section>
+<h2>5. Unary Operators</h2>
+
+<p>Unary means one value.</p>
+
+<ul>
+<li><code>++</code> increase by 1</li>
+<li><code>--</code> decrease by 1</li>
+</ul>
+
+<p>Example.</p>
+
+<pre>
+let count = 5;
+
+count++;
+
+console.log(count);
+</pre>
+
+<p>Output: 6</p>
+
+<p>Example with visitors counter.</p>
+
+<pre>
+let visitors = 100;
+
+visitors++;
+</pre>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create a variable level = 1<br>
+Increase it using ++
+</div>
+</section>
+
+
+<section>
+<h2>6. Ternary Operator</h2>
+
+<p>This is a short way to write if else.</p>
+
+<p>Structure:</p>
+
+<pre>
+condition ? value1 : value2
+</pre>
+
+<p>Example. Age check.</p>
+
+<pre>
+let age = 20;
+
+let message = age >= 18 ? "Adult" : "Minor";
+
+console.log(message);
+</pre>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create marks = 40<br>
+Use ternary operator.<br>
+If marks >= 50 show "Pass"<br>
+Else show "Fail"
+</div>
+</section>
+
+
+<section>
+<h2>7. If Statement</h2>
+
+<p>If runs code when condition is true.</p>
+
+<p>Example.</p>
+
+<pre>
+let age = 20;
+
+if(age >= 18){
+console.log("You can vote");
+}
+</pre>
+
+<p>Use if when you only need one condition.</p>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create temperature = 35<br>
+If temperature > 30<br>
+Print "It is hot".
+</div>
+</section>
+
+
+<section>
+<h2>8. if else</h2>
+
+<p>Use when there are two possibilities.</p>
+
+<p>Example. Login result.</p>
+
+<pre>
+let password = "1234";
+
+if(password === "1234"){
+console.log("Login success");
+}else{
+console.log("Wrong password");
+}
+</pre>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create age = 16<br>
+If age >= 18 print "Allowed"<br>
+Else print "Not allowed".
+</div>
+</section>
+
+
+<section>
+<h2>9. else if</h2>
+
+<p>Use when you have many conditions.</p>
+
+<p>Example. Exam grading.</p>
+
+<pre>
+let marks = 75;
+
+if(marks >= 90){
+console.log("Grade A");
+}
+else if(marks >= 70){
+console.log("Grade B");
+}
+else if(marks >= 50){
+console.log("Grade C");
+}
+else{
+console.log("Fail");
+}
+</pre>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create score = 85<br>
+Write conditions for A, B, C grades.
+</div>
+</section>
+
+
+<section>
+<h2>10. Switch Statement</h2>
+
+<p>Switch checks one variable against many values.</p>
+
+<p>Good for menus or fixed options.</p>
+
+<p>Example. Day of week.</p>
+
+<pre>
+let day = 2;
+
+switch(day){
+case 1:
+console.log("Monday");
+break;
+
+case 2:
+console.log("Tuesday");
+break;
+
+case 3:
+console.log("Wednesday");
+break;
+
+default:
+console.log("Invalid day");
+}
+</pre>
+
+<p>Use switch when many exact values are checked.</p>
+
+<div class="practice">
+<strong>Practice</strong><br>
+Create a variable month = 1<br>
+Use switch to print January, February, March.
+</div>
+</section>
+
+
+<section>
+<h2>End of Lesson</h2>
+
+<p>You learned:</p>
+
+<ul>
+<li>Arithmetic operators</li>
+<li>Assignment operators</li>
+<li>Comparison operators</li>
+<li>Logical operators</li>
+<li>Unary operators</li>
+<li>Ternary operator</li>
+<li>If statements</li>
+<li>Else if</li>
+<li>Switch</li>
+</ul>
+
+<p>Practice these in the browser console.</p>
+
+
+</section>
+
+</body>
+</html>
